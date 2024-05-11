@@ -22,7 +22,7 @@ public class LoginService {
 		String hashPwd=passwordEncoder.encode(customer.getPwd());
 		customer.setPwd(hashPwd);
 		Customer savedCustomer=customerRepository.save(customer);	
-		if(savedCustomer.getId()>0) {
+		if(savedCustomer.getCustomerId()>0) {
 			return savedCustomer;
 		}
 		else {

@@ -1,6 +1,9 @@
 package com.DevRohit.SpringSecurity.model;
 
 
+import java.time.LocalDateTime;
+import java.util.Date;
+
 import org.hibernate.annotations.GenericGenerator;
 
 import jakarta.persistence.Entity;
@@ -19,9 +22,11 @@ public class Customer {
 	@Id
 	@GeneratedValue(strategy=GenerationType.AUTO,generator="native")
 	@GenericGenerator(name = "native",strategy="native")
-	private Long id;
+	private Long customerId;
 	private String email;
 	private String pwd;
 	private String role;
-
+    private String name;
+    private String mobileNumber;
+    private LocalDateTime createDt;
 }
