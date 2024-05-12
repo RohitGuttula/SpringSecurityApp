@@ -10,6 +10,6 @@ import com.DevRohit.SpringSecurity.model.Notices;
 
 @Repository
 public interface NoticesRepository extends CrudRepository<Notices, Integer> {
-	@Query(value = "from Notice n where CURDATE() BETWEEN noticBegDt AND noticEndDt")
+	@Query(value = "from Notices n where CURDATE() BETWEEN noticBegDt AND noticEndDt")
 	List<Notices> findAllActiveNotices();
 }
